@@ -1,0 +1,39 @@
+<!--
+  Generated template for the SingupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Singup</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup]="signUpForm" (submit)="signUpUser()" novalidate>
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input formControlName="email" type="email" placeholder="Alamat email anda" [class.invalid]="!signUpForm.controls.email.valid && blur"></ion-input>
+    </ion-item>
+    <ion-item class="error-message" *ngIf="!signUpForm.controls.email.valid && signUpForm.controls.email.touched">
+      <p>Isikan email yang valid!</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Password</ion-label>
+      <ion-input formControlName="password" type="password" placeholder="Password anda" [class.invalid]="!signUpForm.controls.password.valid && blur"></ion-input>
+    </ion-item>
+    <ion-item class="error-message" *ngIf="!signUpForm.controls.password.valid && signUpForm.controls.password.touched">
+      <p>Isikan password lebih minimal 6 karakter!</p>
+    </ion-item>
+
+    <button ion-button type="submit" block color="primary" [disabled]="!signUpForm.valid">
+      Create
+    </button>
+
+  </form>
+</ion-content>

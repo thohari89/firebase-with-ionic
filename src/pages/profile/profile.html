@@ -1,0 +1,35 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Profile</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+         <!-- atau <img src="../../assets/icon/logout-outline.png" width ="32" height="32"-->
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+      <ion-list-header>
+        User Personal Information
+      </ion-list-header>
+  </ion-list>
+  <ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4>Email</ion-col>
+        <ion-col col-8 *ngIf="userProfile?.email">{{userProfile?.email}}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+</ion-content>
