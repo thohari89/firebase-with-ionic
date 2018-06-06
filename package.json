@@ -26,6 +26,7 @@
     "@ionic-native/status-bar": "4.7.0",
     "@ionic/storage": "2.1.3",
     "cordova-plugin-camera": "^4.0.3",
+    "cordova-plugin-ionic": "^4.1.7",
     "firebase": "^5.0.4",
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
@@ -41,7 +42,12 @@
   "description": "An Ionic project",
   "cordova": {
     "plugins": {
-      "cordova-plugin-camera": {}
+      "cordova-plugin-camera": {},
+      "cordova-plugin-ionic": {
+        "APP_ID": "c554d15f",
+        "CHANNEL_NAME": "Master",
+        "UPDATE_METHOD": "auto"
+      }
     }
   }
 }
